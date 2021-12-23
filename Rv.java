@@ -1,29 +1,27 @@
-import java.io.*;
-import java.util.Scanner;
-
+import java.util.*;
 public class Rv {
 
     public static void main(String[] args) {
-        String s="abc";
         Scanner sc= new Scanner(System.in);
-        String a=sc.next();
+        String str= sc.nextLine();
         char ch;
-        reverse(s);
-        reverse(a);
-    }
-    public static Object reverse(String s) {
-        String n="";
-        try {
-            for(int i=0;i<s.length();i++)
+        String rev="";
+        method(str);
+        if(str.matches("[a-z A-Z]+"))
+        {
+            for(int i=0;i<str.length();i++)
             {
-                char ch = s.charAt(i);
-                n=ch+n;
+                ch=str.charAt(i);
+                rev=ch+rev;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println(rev);
         }
-        System.out.print(n);
-        return n;
+        else
+        {
+            System.out.println("Error!!");
+        }
     }
-
+    public static String method(String str){
+        return str;
+    }
 }
