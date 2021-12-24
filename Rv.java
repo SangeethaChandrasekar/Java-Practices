@@ -1,29 +1,26 @@
-import java.io.*;
 import java.util.Scanner;
-
-public class Rv {
-
-    public static void main(String[] args) {
-        String s="abc";
-        Scanner sc= new Scanner(System.in);
-        String a=sc.next();
+class Reverse {
+    public static String methodTwo(String s) {
         char ch;
-        reverse(s);
-        reverse(a);
-    }
-    public static Object reverse(String s) {
-        String n="";
-        try {
-            for(int i=0;i<s.length();i++)
-            {
-                char ch = s.charAt(i);
-                n=ch+n;
+        String rev = "";
+        System.out.println("Given String:" + s);
+        if (s.matches("[a-z A-Z]+")) {
+            for (int i = 0; i < s.length(); i++) {
+                ch = s.charAt(i);
+                rev = ch + rev;
             }
-        } catch (Exception e) {
-            e.printStackTrace();
+            System.out.println("Reversed String:" + rev);
+        } else {
+            System.out.println("Error!!");
         }
-        System.out.print(n);
-        return n;
+        return rev;
     }
-
+}
+public class Rv {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        Reverse reverseString = new Reverse();
+        reverseString.methodTwo(str);
+    }
 }
