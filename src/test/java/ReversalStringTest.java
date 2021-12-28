@@ -6,8 +6,7 @@ public class ReversalStringTest {
     public void StringReverse() {
         if (Reverse.methodTwo("").isEmpty()) {
             System.out.println("Empty");
-        }
-    }
+        }}
     @Test
     public  void StringReverse1() {
         if (Reverse.methodTwo("*").matches("[!@#$%^&*()_+]")) {
